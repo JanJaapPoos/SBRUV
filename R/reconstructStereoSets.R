@@ -420,7 +420,8 @@ reconstructStereoSets <- function(shapes.2d, shapes.3d, cal.file,
 				list('shapes'=
 					list(
 						'landmarks'=lm_mat,
-						'curves'=curves_r
+						'curves'=curves_r,
+						'unit'=cal_unit
 					)
 				), file=shapes_3d_fpath[i])
 		}
