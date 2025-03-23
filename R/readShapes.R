@@ -180,7 +180,7 @@ print.shapes <- function(x, ...){
 
 	vector_limit <- 3
 	vector_names <- c('image.id', 'image.name', 'scaling', 'scaling.units', 'ruler.pixel', 'ruler.interval', 
-		'checkerboard.nx', 'checkerboard.ny', 'square.pixel', 'square.size')
+		'checkerboard.nx', 'checkerboard.ny', 'square.pixel', 'square.size', 'unit')
 
 	for(vector_name in vector_names){
 
