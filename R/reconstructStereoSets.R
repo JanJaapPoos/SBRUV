@@ -111,10 +111,11 @@ reconstructStereoSets <- function(shapes.2d, shapes.3d, cal.file,
 		return(NULL)
 	}
 	
-	# GET CALIBRATION COEFFICIENTS
+	# GET CALIBRATION COEFFICIENTS AND UNITS
 	if(!file.exists(cal.file)) stop(paste0("The calibration file ('", cal.file, "') was not found."))
 	cal_list <- XML4R2list(cal.file)$calibration
 	cal_coeff <- cal_list$cal.coeff
+	cal_unit <- strsplit(cal_list$sq.size, "\\ ")[[1]][2]
 	
 	# IF NO COLUMN NAMES, USE 2D DIRECTORY NAMES
 	if(is.null(colnames(cal_coeff))) colnames(cal_coeff) <- names(files_2d)
