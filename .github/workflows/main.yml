@@ -18,9 +18,17 @@ jobs:
           Rscript -e "install.packages(c('devtools', 'roxygen2'))"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
+      - name: Build sourcepackage
+        run: |
+          cmd /c "R CMD build . "
+      
       - name: Build Windows binary
         run: |
-          cmd /c "R CMD build . --binary"
+          $pkg = Get-ChildItem -Filter *.tar.gz | Select-Object -ExpandProperty Name
+          cmd /c "R CMD INSTALL --build $pkg"
+
+      - name: List all files (debug)
+        run: dir
           
       - name: Upload Windows binary
         uses: actions/upload-artifact@v4
