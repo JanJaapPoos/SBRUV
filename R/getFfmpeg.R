@@ -1,7 +1,7 @@
 getFfmpeg <-  function(){
   statusFfmpeg <-  system("ffmpeg -v", show.output.on.console = F, intern = FALSE, ignore.stdout = TRUE, ignore.stderr = TRUE)
   if (statusFfmpeg == 127){
-    download.file("https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip", destfile = "ffmpeg.zip")
+    download.file("https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip", destfile = "ffmpeg.zip", timeout = 180)
     allfiles <- list.files()
     unzip("ffmpeg.zip")
     newfile <- setdiff(list.files(), allfiles)
