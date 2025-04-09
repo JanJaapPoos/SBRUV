@@ -21,7 +21,11 @@ jobs:
       - name: Build sourcepackage
         run: |
           R CMD build 
-          R CMD INSTALL --build *.tar.gz
+        shell: cmd
+
+      - name: make zip
+        run: |
+          for /f "delims=" %i in ('dir /s /b *.tar.gz') do R CMD INSTALL --build %
         shell: cmd
 
       - name: List all files (debug)
