@@ -20,7 +20,7 @@ jobs:
 
       - name: Build sourcepackage
         run: |
-          cmd /c "R CMD build . "
+          cmd /c "R CMD build ."
       
       - name: Build Windows binary
         run: |
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-binary
-          path: "*.zip"
+          path: "*.tar.gz"
 
   build-macos:
     runs-on: macos-latest
