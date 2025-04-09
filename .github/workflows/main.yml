@@ -20,8 +20,9 @@ jobs:
 
       - name: Build sourcepackage
         run: |
-          cmd /c "R CMD build ."
-      
+          R CMD build .
+        shell: cmd
+       
       - name: Build Windows binary
         run: |
           $pkg = Get-ChildItem -Filter *.tar.gz | Select-Object -ExpandProperty Name
