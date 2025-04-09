@@ -28,7 +28,7 @@ jobs:
 
       - name: make zip
         run: |
-          R CMD INSTALL --build *.tar.gz
+          R CMD INSTALL --build StereoMorph_1.6.6.tar.gz
         shell: cmd
         
       - name: List files in parent
