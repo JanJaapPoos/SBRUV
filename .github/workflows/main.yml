@@ -20,13 +20,9 @@ jobs:
 
       - name: Build sourcepackage
         run: |
-          R CMD build .
+          R CMD build 
+          R CMD INSTALL --build *.tar.gz
         shell: cmd
-       
-      - name: Build Windows binary
-        run: |
-          $pkg = Get-ChildItem -Filter *.tar.gz | Select-Object -ExpandProperty Name
-          cmd /c "R CMD INSTALL --build $pkg"
 
       - name: List all files (debug)
         run: dir
@@ -40,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-binary
-          path: "*.tar.gz"
+          path: "*.zip"
 
   build-macos:
     runs-on: macos-latest
