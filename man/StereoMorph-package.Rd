@@ -1,6 +1,6 @@
-\name{StereoMorph-package}
-\alias{StereoMorph-package}
-\alias{StereoMorph}
+\name{SBRUV-package}
+\alias{SBRUV-package}
+\alias{SBRUV}
 
 \alias{alignShapesToMidline}
 \alias{btShapes}
@@ -69,23 +69,23 @@
 \alias{XML4R2listLines}
 
 \docType{package}
-\title{Stereo Camera Morphometrics}
+\title{SBRUV - Stereo Camera Morphometrics}
 \description{
-\strong{StereoMorph} provides functions for the collection of 3D points and curves using a stereo camera setup. \strong{StereoMorph} can also be used for \href{https://aaronolsen.github.io/software/digitizing.html}{collecting 2D shape data from photographs}. Please see \href{https://aaronolsen.github.io/software/stereomorph.html}{StereoMorph tutorials} for step-by-step tutorials on how to use \strong{StereoMorph} for 2D or 3D shape data collection.
+\strong{SBRUV} is a copy of strong{StereoMorph}, providing functions for the collection of 3D points and curves using a stereo camera setup. \strong{StereoMorph} can also be used for \href{https://aaronolsen.github.io/software/digitizing.html}{collecting 2D shape data from photographs}. Please see \href{https://aaronolsen.github.io/software/stereomorph.html}{StereoMorph tutorials} for step-by-step tutorials on how to use \strong{StereoMorph} for 2D or 3D shape data collection.
 }
 \details{
 \tabular{ll}{
-Package: \tab StereoMorph\cr
+Package: \tab SBRUV\cr
 Type: \tab Package\cr
-Version: \tab 1.6.6\cr
-Date: \tab 2022-05-24\cr
+Version: \tab 1.0.0\cr
+Date: \tab 2025-5-19\cr
 License: \tab CC BY-SA 4.0\cr
 }
 }
 \author{
-Aaron Olsen, Annat Haber
+Aaron Olsen, Annat Haber, Jan Jaap Poos
 
-Maintainer: Aaron Olsen \email{aarolsen@gmail.com}
+Maintainer: Aaron Olsen \email{janjaap.poos@gmail.com}
 }
 \keyword{ package }
 \seealso{
