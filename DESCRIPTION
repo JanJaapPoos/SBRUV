@@ -1,14 +1,13 @@
-Package: StereoMorph
-Date: 2022-05-24
-Title: Stereo Camera Calibration and Reconstruction
-Description: Functions for the collection of 3D points and curves using a stereo camera setup.
-Version: 1.6.6
+Package: SBRUV
+Date: 2025-05-19
+Title: Stereo Camera Calibration and Reconstruction for StereoBRUV practical
+Description: A copy of StereoMorph with some bug fixes and functions for convenience. Credits go to Aaron Olson. See StereoMorph for details
+Version: 1.0.0
 Depends: R (>= 2.11.0)
 Imports: grDevices, graphics, stats, utils, bezier (>= 1.1), grid, rjson, shiny (>= 0.13.0), Rcpp (>= 0.9.9), jpeg, tiff, png, svgViewR (>= 1.0.1), MASS
 LinkingTo: Rcpp
 Suggests: rgl
-Author: Aaron Olsen, Annat Haber
-Maintainer: Aaron Olsen <aarolsen@gmail.com>
+Author: Aaron Olsen, Annat Haber, Jan Jaap Poos
+Maintainer: Jan Jaap Poos <janjaap.poos@gmail.com>
 Repository: CRAN
-URL: https://aaronolsen.github.io/software/stereomorph.html
 License: CC BY-SA 4.0
