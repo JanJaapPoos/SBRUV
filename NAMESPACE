@@ -1,4 +1,4 @@
-useDynLib(StereoMorph, .registration = TRUE)
+useDynLib(SBRUV, .registration = TRUE)
 
 import(grDevices)
 import(graphics)
