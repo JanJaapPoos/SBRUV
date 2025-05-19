@@ -1,3 +1,7 @@
+# SBRUV
+
+SBRUV is a copy of StereoMorph with some bug fixes and some convenience functions for making the StereoBRUV tutorial run smoothly.
+
 # StereoMorph
 
 StereoMorph is an R package for the collection of shape data using a stereo camera setup.
@@ -9,7 +13,7 @@ Standard digital cameras are commonly used to collect 2D landmarks and curves fr
 The StereoMorph package includes tools for automatically calibrating a set of two cameras using a checkerboard pattern and a digitizing application for digitizing landmarks and curves. Once the cameras are calibrated, StereoMorph allows users to reconstruct any landmarks and curves digitized in both camera views into 3D. Those interested in using StereoMorph will find several useful resources at https://aaronolsen.github.io/software/stereomorph.html, including step-by-step tutorials and accompanying project folders with all the files needed for the tutorial.
 
 # Citing StereoMorph
-To cite StereoMorph in a publication, please use:
+Given that allmost all algorithms were coded in StereoMorp, it is best to cite StereoMorph. To cite StereoMorph in a publication, please use:
 
 - Olsen Aaron M, Mark W Westneat. 2015. StereoMorph: an R package for the collection of 3D landmarks and curves using a stereo camera set-up. Methods in Ecology and Evolution 6:351-356. DOI: 10.1111/2041-210X.12326.
 
