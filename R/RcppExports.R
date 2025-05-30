@@ -2,50 +2,50 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 dilateImage <- function(mat, kernel, niter) {
-    .Call('StereoMorph_dilateImage', PACKAGE = 'StereoMorph', mat, kernel, niter)
+    .Call('SBRUV_dilateImage', PACKAGE = 'SBRUV', mat, kernel, niter)
 }
 
 drawRectangle <- function(mat, corner1, corner2, value, thickness) {
-    .Call('StereoMorph_drawRectangle', PACKAGE = 'StereoMorph', mat, corner1, corner2, value, thickness)
+    .Call('SBRUV_drawRectangle', PACKAGE = 'SBRUV', mat, corner1, corner2, value, thickness)
 }
 
 equalizeImageHist <- function(mat) {
-    .Call('StereoMorph_equalizeImageHist', PACKAGE = 'StereoMorph', mat)
+    .Call('SBRUV_equalizeImageHist', PACKAGE = 'SBRUV', mat)
 }
 
 erodeImage <- function(mat, kernel, niter) {
-    .Call('StereoMorph_erodeImage', PACKAGE = 'StereoMorph', mat, kernel, niter)
+    .Call('SBRUV_erodeImage', PACKAGE = 'SBRUV', mat, kernel, niter)
 }
 
 findBoundaryPoints <- function(mat) {
-    .Call('StereoMorph_findBoundaryPoints', PACKAGE = 'StereoMorph', mat)
+    .Call('SBRUV_findBoundaryPoints', PACKAGE = 'SBRUV', mat)
 }
 
 findCornerSubPix <- function(image, corners, win, max_iter, criteria) {
-    .Call('StereoMorph_findCornerSubPix', PACKAGE = 'StereoMorph', image, corners, win, max_iter, criteria)
+    .Call('SBRUV_findCornerSubPix', PACKAGE = 'SBRUV', image, corners, win, max_iter, criteria)
 }
 
 generateQuads <- function(binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh) {
-    .Call('StereoMorph_generateQuads', PACKAGE = 'StereoMorph', binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh)
+    .Call('SBRUV_generateQuads', PACKAGE = 'SBRUV', binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh)
 }
 
 intCornersFromQuads <- function(quads, max_dist = 15L) {
-    .Call('StereoMorph_intCornersFromQuads', PACKAGE = 'StereoMorph', quads, max_dist)
+    .Call('SBRUV_intCornersFromQuads', PACKAGE = 'SBRUV', quads, max_dist)
 }
 
 orderCorners <- function(int_corners, nx, ny) {
-    .Call('StereoMorph_orderCorners', PACKAGE = 'StereoMorph', int_corners, nx, ny)
+    .Call('SBRUV_orderCorners', PACKAGE = 'SBRUV', int_corners, nx, ny)
 }
 
 meanBlurImage <- function(mat, kernel) {
-    .Call('StereoMorph_meanBlurImage', PACKAGE = 'StereoMorph', mat, kernel)
+    .Call('SBRUV_meanBlurImage', PACKAGE = 'SBRUV', mat, kernel)
 }
 
 rgbToGray <- function(ch1, ch2, ch3) {
-    .Call('StereoMorph_rgbToGray', PACKAGE = 'StereoMorph', ch1, ch2, ch3)
+    .Call('SBRUV_rgbToGray', PACKAGE = 'SBRUV', ch1, ch2, ch3)
 }
 
 thresholdImageMatrix <- function(mat, thresh_mat, delta, type) {
-    .Call('StereoMorph_thresholdImageMatrix', PACKAGE = 'StereoMorph', mat, thresh_mat, delta, type)
+    .Call('SBRUV_thresholdImageMatrix', PACKAGE = 'SBRUV', mat, thresh_mat, delta, type)
 }
 
