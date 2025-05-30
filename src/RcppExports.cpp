@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // dilateImage
 Rcpp::IntegerMatrix dilateImage(Rcpp::IntegerMatrix mat, int kernel, int niter);
-RcppExport SEXP StereoMorph_dilateImage(SEXP matSEXP, SEXP kernelSEXP, SEXP niterSEXP) {
+RcppExport SEXP SBRUV_dilateImage(SEXP matSEXP, SEXP kernelSEXP, SEXP niterSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // drawRectangle
 Rcpp::IntegerMatrix drawRectangle(Rcpp::IntegerMatrix mat, Rcpp::IntegerVector corner1, Rcpp::IntegerVector corner2, int value, int thickness);
-RcppExport SEXP StereoMorph_drawRectangle(SEXP matSEXP, SEXP corner1SEXP, SEXP corner2SEXP, SEXP valueSEXP, SEXP thicknessSEXP) {
+RcppExport SEXP SBRUV_drawRectangle(SEXP matSEXP, SEXP corner1SEXP, SEXP corner2SEXP, SEXP valueSEXP, SEXP thicknessSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -35,7 +35,7 @@ END_RCPP
 }
 // equalizeImageHist
 Rcpp::NumericMatrix equalizeImageHist(Rcpp::NumericMatrix mat);
-RcppExport SEXP StereoMorph_equalizeImageHist(SEXP matSEXP) {
+RcppExport SEXP SBRUV_equalizeImageHist(SEXP matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -46,7 +46,7 @@ END_RCPP
 }
 // erodeImage
 Rcpp::IntegerMatrix erodeImage(Rcpp::IntegerMatrix mat, int kernel, int niter);
-RcppExport SEXP StereoMorph_erodeImage(SEXP matSEXP, SEXP kernelSEXP, SEXP niterSEXP) {
+RcppExport SEXP SBRUV_erodeImage(SEXP matSEXP, SEXP kernelSEXP, SEXP niterSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -59,7 +59,7 @@ END_RCPP
 }
 // findBoundaryPoints
 Rcpp::IntegerMatrix findBoundaryPoints(Rcpp::IntegerMatrix mat);
-RcppExport SEXP StereoMorph_findBoundaryPoints(SEXP matSEXP) {
+RcppExport SEXP SBRUV_findBoundaryPoints(SEXP matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -70,7 +70,7 @@ END_RCPP
 }
 // findCornerSubPix
 Rcpp::NumericMatrix findCornerSubPix(Rcpp::NumericMatrix image, Rcpp::IntegerMatrix corners, int win, int max_iter, double criteria);
-RcppExport SEXP StereoMorph_findCornerSubPix(SEXP imageSEXP, SEXP cornersSEXP, SEXP winSEXP, SEXP max_iterSEXP, SEXP criteriaSEXP) {
+RcppExport SEXP SBRUV_findCornerSubPix(SEXP imageSEXP, SEXP cornersSEXP, SEXP winSEXP, SEXP max_iterSEXP, SEXP criteriaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -85,7 +85,7 @@ END_RCPP
 }
 // generateQuads
 Rcpp::IntegerMatrix generateQuads(Rcpp::IntegerMatrix binary_mat, Rcpp::IntegerMatrix edge_mat, int perim_min, int perim_max, double quad_fit_max, double poly_cont_min, double poly_cont_max, double poly_asp_min, int approx_thresh);
-RcppExport SEXP StereoMorph_generateQuads(SEXP binary_matSEXP, SEXP edge_matSEXP, SEXP perim_minSEXP, SEXP perim_maxSEXP, SEXP quad_fit_maxSEXP, SEXP poly_cont_minSEXP, SEXP poly_cont_maxSEXP, SEXP poly_asp_minSEXP, SEXP approx_threshSEXP) {
+RcppExport SEXP SBRUV_generateQuads(SEXP binary_matSEXP, SEXP edge_matSEXP, SEXP perim_minSEXP, SEXP perim_maxSEXP, SEXP quad_fit_maxSEXP, SEXP poly_cont_minSEXP, SEXP poly_cont_maxSEXP, SEXP poly_asp_minSEXP, SEXP approx_threshSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -104,7 +104,7 @@ END_RCPP
 }
 // intCornersFromQuads
 Rcpp::IntegerMatrix intCornersFromQuads(Rcpp::IntegerMatrix quads, int max_dist);
-RcppExport SEXP StereoMorph_intCornersFromQuads(SEXP quadsSEXP, SEXP max_distSEXP) {
+RcppExport SEXP SBRUV_intCornersFromQuads(SEXP quadsSEXP, SEXP max_distSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -116,7 +116,7 @@ END_RCPP
 }
 // orderCorners
 Rcpp::IntegerMatrix orderCorners(Rcpp::IntegerMatrix int_corners, int nx, int ny);
-RcppExport SEXP StereoMorph_orderCorners(SEXP int_cornersSEXP, SEXP nxSEXP, SEXP nySEXP) {
+RcppExport SEXP SBRUV_orderCorners(SEXP int_cornersSEXP, SEXP nxSEXP, SEXP nySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -129,7 +129,7 @@ END_RCPP
 }
 // meanBlurImage
 Rcpp::NumericMatrix meanBlurImage(Rcpp::NumericMatrix mat, int kernel);
-RcppExport SEXP StereoMorph_meanBlurImage(SEXP matSEXP, SEXP kernelSEXP) {
+RcppExport SEXP SBRUV_meanBlurImage(SEXP matSEXP, SEXP kernelSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -141,7 +141,7 @@ END_RCPP
 }
 // rgbToGray
 Rcpp::NumericMatrix rgbToGray(Rcpp::NumericMatrix ch1, Rcpp::NumericMatrix ch2, Rcpp::NumericMatrix ch3);
-RcppExport SEXP StereoMorph_rgbToGray(SEXP ch1SEXP, SEXP ch2SEXP, SEXP ch3SEXP) {
+RcppExport SEXP SBRUV_rgbToGray(SEXP ch1SEXP, SEXP ch2SEXP, SEXP ch3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -154,7 +154,7 @@ END_RCPP
 }
 // thresholdImageMatrix
 Rcpp::IntegerMatrix thresholdImageMatrix(Rcpp::NumericMatrix mat, Rcpp::NumericMatrix thresh_mat, double delta, int type);
-RcppExport SEXP StereoMorph_thresholdImageMatrix(SEXP matSEXP, SEXP thresh_matSEXP, SEXP deltaSEXP, SEXP typeSEXP) {
+RcppExport SEXP SBRUV_thresholdImageMatrix(SEXP matSEXP, SEXP thresh_matSEXP, SEXP deltaSEXP, SEXP typeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
