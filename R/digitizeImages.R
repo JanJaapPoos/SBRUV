@@ -16,7 +16,7 @@ digitizeImages <- function(image.file = image.file, shapes.file = NULL,
 	# GET STEREOMORPH SHINY APP DIRECTORY
 	if(is.null(app.dir)){
 		app_dir <- tryCatch({
-			app_dir <- paste0(path.package("StereoMorph"), "/extdata/apps/digitizeImages")
+			app_dir <- paste0(path.package("SBRUV"), "/extdata/apps/digitizeImages")
 		}, warning = function(w) {
 		}, error = function(e) {
 			if(e[1]$message == 'none of the packages are loaded'){
