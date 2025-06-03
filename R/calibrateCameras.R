@@ -449,8 +449,8 @@ calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir,
 
 						# DETECT CORNERS IN IMAGES IN VERIFY DIRECTORY
 						image_fpath <- paste0(verify.dir, '/', img_sub_dir[i], '/', save_to_names[j])
-						findCheckerboardCorners(image.file=image_fpath, nx=nx, ny=ny, flip=flip, corner.file=corner_fpath, 
-							sub.pix.win.min=23, verify.file=image_fpath, print.progress=FALSE)
+						try(findCheckerboardCorners(image.file=image_fpath, nx=nx, ny=ny, flip=flip, corner.file=corner_fpath, 
+							sub.pix.win.min=23, verify.file=image_fpath, print.progress=FALSE), silent = T)
 					}
 
 				}else{
