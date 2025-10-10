@@ -1,8 +1,8 @@
 Package: SBRUV
-Date: 2025-06-03
+Date: 2025-10-10
 Title: Stereo Camera Calibration and Reconstruction for StereoBRUV practical
 Description: A copy of StereoMorph with some bug fixes and functions for convenience. Credits go to Aaron Olson. See StereoMorph for details
-Version: 1.0.3
+Version: 1.0.4
 Depends: R (>= 2.11.0)
 Imports: grDevices, graphics, stats, utils, bezier (>= 1.1), grid, rjson, shiny (>= 0.13.0), Rcpp (>= 0.9.9), jpeg, tiff, png, svgViewR (>= 1.0.1), MASS
 LinkingTo: Rcpp
