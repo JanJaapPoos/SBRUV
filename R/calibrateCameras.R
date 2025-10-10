@@ -436,8 +436,17 @@ calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir,
 					extractFrames(file=paste0(img.dir, '/', vid_fnames[i]), save.to=paste0(verify.dir, '/', img_sub_dir[i]),
 						frames=frame_nums, video.i=list('fps'=vid_fps[i], 'frames'=min_nframes), warn.min=NULL)
 					
-					# GET FILENAMES
-					save_to_names <- list.files(paste0(verify.dir, '/', img_sub_dir[i]))
+					# GET FILENAMES: 
+					# ALL WHEN FIRST PASS, READ CORNERS FROM FIRST PASS OTHERWISE. CHANGE BY JJP TO SPEED SBRUV UP
+					# THE ORIGINAL STEREOMORPH ALWAYS READ verify.dir from pass i (so the code in the "if" branch
+					if( i == 1){
+						save_to_names <- list.files(paste0(verify.dir, '/', img_sub_dir[i]))
+
+					} else {
+						filetype_verify <- rev(unlist(strsplit(list.files(paste0(verify.dir, '/',img_sub_dir[1]))[1],"\\.")))[1]	
+						save_to_names <- gsub("txt", filetype_verify, list.files(paste0(corner.dir, '/', img_sub_dir[1])))
+
+					}
 
 					for(j in 1:length(save_to_names)){
 
