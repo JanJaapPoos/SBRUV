@@ -644,7 +644,7 @@ calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir,
 				#findHo <- findHomography(cal_corners[, , !is.na(cal_corners[1, 1, , view]), view], nx=nx)
 
 				# UNDISTORT CORNERS USED IN UNDISTORTION SAMPLE
-				coor_2d_u <- undistort(cal_corners[, , undist_sample_nona, view], image.size=img_size[view, ],
+				coor_2d_u <- undistort(cal_corners[, , undist_sample_nona, view], image_size=img_size[view, ],
 					center=undistort_params[view, 1:2], k=undistort_params[view, 3:5], p=undistort_params[view, 6:7])
 				#coor_2d_u <- undistort(cal_corners[, , !is.na(cal_corners[1, 1, , view]), view], image.size=img_size[view, ],
 				#	center=undistort_params[view, 1:2], k=undistort_params[view, 3:5], p=undistort_params[view, 6:7])
@@ -665,7 +665,7 @@ calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir,
 
 		# UNDISTORT ALL CORNERS
 		for(view in 1:num_views) cal_corners[, , , view] <- undistort(cal_corners[, , , view], 
-			image.size=img_size[view, ], center=undistort_params[view, 1:2], 
+			image_size=img_size[view, ], center=undistort_params[view, 1:2], 
 			k=undistort_params[view, 3:5], p=undistort_params[view, 6:7])
 
 	}else{

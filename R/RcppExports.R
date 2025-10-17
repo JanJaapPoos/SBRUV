@@ -2,50 +2,62 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 dilateImage <- function(mat, kernel, niter) {
-    .Call('SBRUV_dilateImage', PACKAGE = 'SBRUV', mat, kernel, niter)
+    .Call(`_SBRUV_dilateImage`, mat, kernel, niter)
 }
 
 drawRectangle <- function(mat, corner1, corner2, value, thickness) {
-    .Call('SBRUV_drawRectangle', PACKAGE = 'SBRUV', mat, corner1, corner2, value, thickness)
+    .Call(`_SBRUV_drawRectangle`, mat, corner1, corner2, value, thickness)
 }
 
 equalizeImageHist <- function(mat) {
-    .Call('SBRUV_equalizeImageHist', PACKAGE = 'SBRUV', mat)
+    .Call(`_SBRUV_equalizeImageHist`, mat)
 }
 
 erodeImage <- function(mat, kernel, niter) {
-    .Call('SBRUV_erodeImage', PACKAGE = 'SBRUV', mat, kernel, niter)
+    .Call(`_SBRUV_erodeImage`, mat, kernel, niter)
 }
 
 findBoundaryPoints <- function(mat) {
-    .Call('SBRUV_findBoundaryPoints', PACKAGE = 'SBRUV', mat)
+    .Call(`_SBRUV_findBoundaryPoints`, mat)
 }
 
 findCornerSubPix <- function(image, corners, win, max_iter, criteria) {
-    .Call('SBRUV_findCornerSubPix', PACKAGE = 'SBRUV', image, corners, win, max_iter, criteria)
+    .Call(`_SBRUV_findCornerSubPix`, image, corners, win, max_iter, criteria)
+}
+
+findHomography <- function(coor_img, coor_obj_ = NULL, nx_ = NULL, ny_ = NULL) {
+    .Call(`_SBRUV_findHomography`, coor_img, coor_obj_, nx_, ny_)
 }
 
 generateQuads <- function(binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh) {
-    .Call('SBRUV_generateQuads', PACKAGE = 'SBRUV', binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh)
+    .Call(`_SBRUV_generateQuads`, binary_mat, edge_mat, perim_min, perim_max, quad_fit_max, poly_cont_min, poly_cont_max, poly_asp_min, approx_thresh)
 }
 
 intCornersFromQuads <- function(quads, max_dist = 15L) {
-    .Call('SBRUV_intCornersFromQuads', PACKAGE = 'SBRUV', quads, max_dist)
+    .Call(`_SBRUV_intCornersFromQuads`, quads, max_dist)
 }
 
 orderCorners <- function(int_corners, nx, ny) {
-    .Call('SBRUV_orderCorners', PACKAGE = 'SBRUV', int_corners, nx, ny)
+    .Call(`_SBRUV_orderCorners`, int_corners, nx, ny)
 }
 
 meanBlurImage <- function(mat, kernel) {
-    .Call('SBRUV_meanBlurImage', PACKAGE = 'SBRUV', mat, kernel)
+    .Call(`_SBRUV_meanBlurImage`, mat, kernel)
 }
 
 rgbToGray <- function(ch1, ch2, ch3) {
-    .Call('SBRUV_rgbToGray', PACKAGE = 'SBRUV', ch1, ch2, ch3)
+    .Call(`_SBRUV_rgbToGray`, ch1, ch2, ch3)
 }
 
 thresholdImageMatrix <- function(mat, thresh_mat, delta, type) {
-    .Call('SBRUV_thresholdImageMatrix', PACKAGE = 'SBRUV', mat, thresh_mat, delta, type)
+    .Call(`_SBRUV_thresholdImageMatrix`, mat, thresh_mat, delta, type)
+}
+
+transformPlanarCalibrationCoordinates <- function(tpar, nx, ny, sx, sy_ = NULL) {
+    .Call(`_SBRUV_transformPlanarCalibrationCoordinates`, tpar, nx, ny, sx, sy_)
+}
+
+undistort <- function(x, image_size, center = as.numeric( c(0, 0)), k = as.numeric( c(0, 0, 0)), p = as.numeric( c(0, 0))) {
+    .Call(`_SBRUV_undistort`, x, image_size, center, k, p)
 }
 
