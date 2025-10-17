@@ -1,6 +1,6 @@
 # SBRUV
 
-SBRUV is a copy of StereoMorph with some bug fixes and some convenience functions for making the StereoBRUV tutorial run smoothly.
+SBRUV is a copy of StereoMorph with some bug fixes, faster implementation of several key functions, and some convenience functions,  for making the StereoBRUV tutorial run smoothly.
 
 # StereoMorph
 
@@ -12,12 +12,12 @@ Standard digital cameras are commonly used to collect 2D landmarks and curves fr
 
 The StereoMorph package includes tools for automatically calibrating a set of two cameras using a checkerboard pattern and a digitizing application for digitizing landmarks and curves. Once the cameras are calibrated, StereoMorph allows users to reconstruct any landmarks and curves digitized in both camera views into 3D. Those interested in using StereoMorph will find several useful resources at https://aaronolsen.github.io/software/stereomorph.html, including step-by-step tutorials and accompanying project folders with all the files needed for the tutorial.
 
+SBRUV was initially forked to fix a bug in the function that is used for calibrating stereo cameras. From there, several key functions were implemented differently to gain speed, mostly in the routine for camera calibration. Several functions were added for convenience, for instance a function that downloads the most recent ffmpeg software and unpacks it in the working directory. For incidental use of the SBRUV/StereoMorph software this is convenient, but for extensive use it is best to add a central copy and make it available for all users by means of setting the environmental (PATH) variables appropriately. 
+
 # Citing StereoMorph
 Given that allmost all algorithms were coded in StereoMorp, it is best to cite StereoMorph. To cite StereoMorph in a publication, please use:
 
 - Olsen Aaron M, Mark W Westneat. 2015. StereoMorph: an R package for the collection of 3D landmarks and curves using a stereo camera set-up. Methods in Ecology and Evolution 6:351-356. DOI: 10.1111/2041-210X.12326.
-
-- Olsen, AM & A Haber (2017). StereoMorph: Stereo Camera Calibration and Reconstruction. Version 1.6.1. https://CRAN.R-project.org/package=StereoMorph.
 
 # License
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
