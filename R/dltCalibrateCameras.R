@@ -225,9 +225,9 @@ dltCalibrateCameras <- function(coor.2d, nx, grid.size, c.run = FALSE, reduce.gr
 
 	# GET 3D COORDINATES BASED ON OPTIMIZED PARAMETERS
 	if(length(grid.size) == 1){
-		coor_3d_coeff <- transformPlanarCalibrationCoordinates(tpar=c(p_init), nx=nx, ny=ny, sx=grid.size[1])
+		coor_3d_coeff <- transformPlanarCalibrationCoordinates(tpar=matrix(c(p_init),ncol=6, byrow = T), nx=nx, ny=ny, sx=grid.size[1])
 	}else{
-		coor_3d_coeff <- transformPlanarCalibrationCoordinates(tpar=c(p_init), nx=nx, ny=ny, sx=grid.size[1], sy=grid.size[2])
+		coor_3d_coeff <- transformPlanarCalibrationCoordinates(tpar=matrix(c(p_init),ncol=6, byrow = T), nx=nx, ny=ny, sx=grid.size[1], sy=grid.size[2])
 	}
 
 	# GET 2D INPUT COORDINATES

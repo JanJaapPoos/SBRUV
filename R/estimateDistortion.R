@@ -8,7 +8,7 @@ estimateDistortion <- function(undistort.params, img.size){
 		rep(seq(0,img.size[2],length=nx), ny))
 	
 	# Undistort using undistortion parameters
-	u_corners <- undistort(d_corners, image.size=img.size, center=undistort.params[c('cx', 'cy')], 
+	u_corners <- undistort(d_corners, image_size=img.size, center=undistort.params[c('cx', 'cy')], 
 		k=undistort.params[c('k1', 'k2', 'k3')], p=undistort.params[c('p1', 'p2')])
 
 	# Try different starting parameters
@@ -61,7 +61,7 @@ estimateDistortion <- function(undistort.params, img.size){
 	return(p)
 	
 	# Check distortion parameters against original distorted corners
-	#rd_corners <- undistort(u_corners, image.size=img.size, center=c(p[1], p[2]), 
+	#rd_corners <- undistort(u_corners, image_size=img.size, center=c(p[1], p[2]), 
 	#	k=c(p[3], p[4], p[5]), p=c(p[6], p[7]))
 
 	#errors <- sqrt(rowSums((d_corners - rd_corners)^2))

@@ -3,7 +3,7 @@ dltTransformationParameterRMSError <- function(p, coor.2d, nx, ny, sx, sy=NULL, 
 	#t_iter <<- t_iter + 1
 
 	# GENERATE 3D CALIBRATION POINTS USING TRANSFORMATION PARAMETERS
-	coor.3d <- transformPlanarCalibrationCoordinates(tpar=c(p.fixed, p), nx=nx, ny=ny, sx=sx, sy=sy)
+	coor.3d <- transformPlanarCalibrationCoordinates(tpar = matrix(c(p.fixed, p), ncol=6, byrow=TRUE), nx=nx, ny=ny, sx=sx, sy=sy)
 
 	# FIND COEFFICIENTS AND DLT INVERSE ERROR
 	dlt_coefficients <- dltCoefficients(coor.3d=coor.3d, coor.2d=coor.2d)

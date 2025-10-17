@@ -68,7 +68,7 @@ dltTestCalibration <- function(cal.coeff, coor.2d, nx, sq.size, reciprocal = TRU
 
 		## FIND ALIGNED TO IDEAL RECONSTRUCTION ERRORS
 		# MAKE THEORETICAL GRID OF SAME SIZE FOR ESTIMATE COMPARISON
-		coor_3d <- transformPlanarCalibrationCoordinates(tpar=rep(0, 6), nx=nx, ny=ny, sx=sq.size.num)
+		coor_3d <- transformPlanarCalibrationCoordinates(tpar=matrix(rep(0, 6), ncol = 6), nx=nx, ny=ny, sx=sq.size.num)
 
 		# GET OPTIMAL POINT ALIGNMENT
 		coor_3d_unify <- findOptimalPointAlignment(corners_3d[, , aspect], coor_3d)
