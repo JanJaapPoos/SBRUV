@@ -29,6 +29,7 @@ Downloading and installing the ffmpeg software may take a while, so be patient. 
 
 Once the working directory is set and ffmpeg is available, we can create two directories. The first directory is used to store video files recorded for calibration, and is named 'calibration'. The second directory is used to store video files for our observations, and is named 'observations'. The names of these two directories are first stored in R, so they can be accessed later in the code. If you want to make changes in the observations directory to be analysed (for instance because you have different data sets for different days), we only need to change the name of the directory here.
 
+```
 # give names for two directories: one for calibration footage, and one for observation footage
 cal_dir <- "calibration"
 obs_dir <- "observations"
@@ -36,6 +37,7 @@ obs_dir <- "observations"
 # create the two directories defined above using te dir.create() function in R
 dir.create(cal_dir)
 dir.create(obs_dir)
+```
 
 # Calibrating the cameras
 
