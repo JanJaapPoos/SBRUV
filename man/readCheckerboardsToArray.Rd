@@ -31,7 +31,7 @@ Row reversal means that point order is reversed along the second dimension (the 
 }
 \examples{
 ## GET FILE DIRECTORY FOR PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET NUMBER OF ROWS AND COLUMNS
 ## THESE ARE THE NUMBER OF INTERNAL CORNERS, NOT THE NUMBER OF SQUARES

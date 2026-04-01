@@ -25,7 +25,7 @@ NULL
 \examples{
 \dontrun{
 # Get the path to package example files
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 # Write 2D landmark pixel coordinates from a single shape file to TPS
 writeLMToTPS(paste0(fdir, 'Shapes_2D/mug_003.txt'), 'Mug_2D.tps')

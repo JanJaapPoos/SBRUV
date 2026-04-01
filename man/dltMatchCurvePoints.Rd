@@ -65,7 +65,7 @@ For a general overview of DLT: \url{http://kwon3d.com/theory/dlt/dlt.html}
 }
 \examples{
 ## GET THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILE PATH TO LANDMARK DATA
 file <- paste0(fdir, "lm_2d_a2_v", 1:2, ".txt")

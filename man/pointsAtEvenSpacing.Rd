@@ -42,7 +42,7 @@ points(pts_aes, col='red')
 
 ## POINTS ALONG A CURVE ##
 ## GET FILE DIRECTORY FOR PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## GET 3D LANDMARK AND CURVE POINT FILE AND READ INTO A MATRIX
 lm.matrix <- readLandmarksToMatrix(paste0(fdir, "lm_3d_a2.txt"), row.names=1)

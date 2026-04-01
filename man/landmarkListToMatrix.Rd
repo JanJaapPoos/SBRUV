@@ -14,7 +14,7 @@ landmarkListToMatrix(lm.list)
 \seealso{\code{\link{readLandmarksToList}}, \code{\link{readLandmarksToMatrix}}}
 \examples{
 ## GET FILE DIRECTORY FOR PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILES TO LOAD - TWO DIFFERENT 3D POINT SETS
 file <- paste0(fdir, "lm_3d_even_a", 1:2, ".txt")

@@ -59,7 +59,7 @@ This function was written based on the methodology described in 'Learning OpenCV
 \examples{
 
 ## GET THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## FIND 5 X 3 INTERNAL CORNERS IN A SINGLE IMAGE
 corners <- findCheckerboardCorners(image.file=paste0(fdir, 

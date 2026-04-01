@@ -52,7 +52,7 @@ Klingenberg, C.P., Barluengua, M., Meyer, A. (2002) Shape analysis of symmetric 
 \seealso{\code{\link{readLandmarksToMatrix}}, \code{\link{alignLandmarksToMidline}}}
 \examples{
 ## FIND THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## GET LANDMARKS
 file <- paste0(fdir, "lm_3d_unify.txt")

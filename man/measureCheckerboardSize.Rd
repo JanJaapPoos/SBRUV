@@ -47,7 +47,7 @@ a list of class \code{"measureCheckerboardSize"} with the following elements:
 }
 \examples{
 ## GET THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILE PATH TO CHECKERBOARD POINTS FILE
 corner_file <- paste0(fdir, "checker_21_14_200(9).txt")

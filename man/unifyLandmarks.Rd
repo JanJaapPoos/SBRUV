@@ -46,7 +46,7 @@ Rohlf, F.J. (1990) "Chapter 10. Rotational fit (Procrustes) Methods." \emph{Proc
 }
 \examples{
 ## FIND THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET LANDMARK FILES
 file <- paste0(fdir, "lm_3d_even_a", 1:3, ".txt")

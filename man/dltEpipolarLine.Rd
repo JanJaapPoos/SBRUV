@@ -44,7 +44,7 @@ For a general overview of DLT: \url{http://kwon3d.com/theory/dlt/dlt.html}
 }
 \examples{
 ## FIND THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILE PATH TO CALIBRATION COEFFICIENTS IN TWO CAMERA STEREO SETUP
 cc_file <- paste0(fdir, "cal_coeffs.txt")

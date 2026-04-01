@@ -29,7 +29,7 @@ a list of Bezier control points grouped by name and file number.}
 }
 \examples{
 ## GET FILE DIRECTORY FOR PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## FILE TO READ
 file <- paste0(fdir, "bezier_control_points_a2_v", 1:2, ".txt")

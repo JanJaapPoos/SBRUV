@@ -16,7 +16,7 @@ landmarkMatrixToList(lm.matrix, semilandmark.pattern='[0-9]+$', k=ncol(lm.matrix
 \examples{
 
 ## GET FILE DIRECTORY FOR PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILES TO LOAD - TWO DIFFERENT 3D POINT SETS
 file <- paste0(fdir, "lm_2d_a1_v", 1:2, ".txt")

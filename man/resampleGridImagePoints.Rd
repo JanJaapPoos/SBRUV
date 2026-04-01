@@ -28,7 +28,7 @@ a list with the following elements:
 }
 \examples{
 ## FIND THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## GET GRID POINTS
 file <- paste0(fdir, "cal_a1_v2.txt")

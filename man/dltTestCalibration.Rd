@@ -71,7 +71,7 @@ nx <- 21
 ny <- 14
 
 ## GET THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## SET FILE PATH TO CHECKERBOARD CORNERS FROM TEST CALIBRATION IMAGE SET
 file <- matrix(c(paste0(fdir, "test_cal_a", 1:11, "_v1.txt"), 

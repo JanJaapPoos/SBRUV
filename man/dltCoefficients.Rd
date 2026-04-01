@@ -42,7 +42,7 @@ nx <- 21
 ny <- 14
 
 ## GET THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## GET FILE PATHS FOR PIXEL COORDINATES FROM CALIBRATION IMAGES 1 AND 5
 file2d <- matrix(c(paste0(fdir, "cal_a", c(1, 5), "_v1.txt"), 
