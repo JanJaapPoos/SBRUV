@@ -44,7 +44,7 @@ a list of class \code{"alignLandmarksToMidline"} with the following elements:
 \seealso{\code{\link{readLandmarksToMatrix}}}
 \examples{
 ## FIND THE FILE DIRECTORY FOR EXTRA R PACKAGE FILES
-fdir <- paste0(path.package("StereoMorph"), "/extdata/")
+fdir <- paste0(path.package("SBRUV"), "/extdata/")
 
 ## GET LANDMARKS
 file <- paste0(fdir, "lm_3d_unify.txt")
