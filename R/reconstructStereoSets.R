@@ -432,5 +432,5 @@ reconstructStereoSets <- function(shapes.2d, shapes.3d, cal.file,
 	#)
 	#class(rlist) <- 'reconstructStereoSets'
 	
-	return(NULL)
+	return(readShapes(shapes.3d))
 }
