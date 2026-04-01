@@ -87,7 +87,7 @@ Now that we have the calibration file for the DLT parameters, our stereo observa
 digitizeImages(image.file = file.path(obs_dir, 'Images'), 
                shapes.file = file.path(obs_dir, 'Shapes 2D'),
                landmarks.ref = file.path(obs_dir, 'landmarks.txt'), 
-               cal.file = file.path(obs_dir,'calibration_gopro.txt'))
+               cal.file = file.path(obs_dir,'calibration.txt'))
 ```
 
 Running this command will open the digitizing part of StereoMorph. Once you have digitized a number of frames, the 3D locations of the landmarks can be reconstructed, and put into the R workspace as shapes. This is done using the reconstructStereoSets() function.
@@ -95,7 +95,7 @@ Running this command will open the digitizing part of StereoMorph. Once you have
 ```
 reconstructStereoSets(shapes.2d = file.path(obs_dir, 'Shapes 2D'), 
                       shapes.3d = file.path(obs_dir, 'Shapes 3D'),
-                      cal.file  = file.path(obs_dir, 'calibration_gopro.txt'))
+                      cal.file  = file.path(obs_dir, 'calibration.txt'))
 
 shapes <- readShapes(file = file.path(obs_dir, 'Shapes 3D'))
 ```
