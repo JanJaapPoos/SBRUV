@@ -15,7 +15,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Rscript -e "install.packages(c('devtools', 'roxygen2'))"
+          Rscript -e "install.packages(c('devtools', 'roxygen2', 'remotes'))"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
       - name: Build sourcepackage
@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Rscript -e "install.packages(c('devtools', 'roxygen2'))"
+          Rscript -e "install.packages(c('devtools', 'roxygen2', 'remotes'))"
           Rscript -e "devtools::install_deps(dependencies = TRUE)"
 
       - name: Build macOS binary
