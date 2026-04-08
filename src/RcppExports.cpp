@@ -185,6 +185,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rotationMatrixZYX_SM_cpp
+NumericMatrix rotationMatrixZYX_SM_cpp(NumericVector t);
+RcppExport SEXP _SBRUV_rotationMatrixZYX_SM_cpp(SEXP tSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type t(tSEXP);
+    rcpp_result_gen = Rcpp::wrap(rotationMatrixZYX_SM_cpp(t));
+    return rcpp_result_gen;
+END_RCPP
+}
 // transformPlanarCalibrationCoordinates
 NumericMatrix transformPlanarCalibrationCoordinates(NumericMatrix tpar, int nx, int ny, double sx, Nullable<double> sy_);
 RcppExport SEXP _SBRUV_transformPlanarCalibrationCoordinates(SEXP tparSEXP, SEXP nxSEXP, SEXP nySEXP, SEXP sxSEXP, SEXP sy_SEXP) {
@@ -230,6 +241,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_SBRUV_meanBlurImage", (DL_FUNC) &_SBRUV_meanBlurImage, 2},
     {"_SBRUV_rgbToGray", (DL_FUNC) &_SBRUV_rgbToGray, 3},
     {"_SBRUV_thresholdImageMatrix", (DL_FUNC) &_SBRUV_thresholdImageMatrix, 4},
+    {"_SBRUV_rotationMatrix_ZYX_SM_cpp", (DL_FUNC) &_SBRUV_rotationMatrix_ZYX_SM_cpp, 1},
     {"_SBRUV_transformPlanarCalibrationCoordinates", (DL_FUNC) &_SBRUV_transformPlanarCalibrationCoordinates, 5},
     {"_SBRUV_undistort", (DL_FUNC) &_SBRUV_undistort, 5},
     {NULL, NULL, 0}
