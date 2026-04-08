@@ -30,7 +30,7 @@ epipolarBezier <- function(p, cal.coeff, undistort.coeff = NULL, distort.coeff =
 	}else{
 
 		# Undistort point
-		up <- undistort(p, img.size[1, ], center=undistort.coeff[1, 1:2], 
+		up <- undistort(matrix(p, ncol=2), img.size[1, ], center=undistort.coeff[1, 1:2], 
 			k=undistort.coeff[1, 3:5], p=undistort.coeff[1, 6:7])
 
 		# Get epipolar line of undistorted point
