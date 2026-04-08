@@ -23,7 +23,8 @@ NumericVector undistort(NumericVector x,
   if (k.size() == 2) k.push_back(0.0);
   
   // Get dimensions of x
-  IntegerVector dim = x.attr("dim");
+  SEXP dimAttr = x.attr("dim");
+  IntegerVector dim = Rf_isNull(dimAttr) ? IntegerVector() : as<IntegerVector>(dimAttr);
   
   // Handle 4D array: call recursively along 4th dimension
   if (dim.size() == 4) {
