@@ -241,7 +241,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_SBRUV_meanBlurImage", (DL_FUNC) &_SBRUV_meanBlurImage, 2},
     {"_SBRUV_rgbToGray", (DL_FUNC) &_SBRUV_rgbToGray, 3},
     {"_SBRUV_thresholdImageMatrix", (DL_FUNC) &_SBRUV_thresholdImageMatrix, 4},
-    {"_SBRUV_rotationMatrixZYX_SM_cpp", (DL_FUNC) &_SBRUV_rotationMatrix_ZYX_SM_cpp, 1},
+    {"_SBRUV_rotationMatrixZYX_SM_cpp", (DL_FUNC) &_SBRUV_rotationMatrixZYX_SM_cpp, 1},
     {"_SBRUV_transformPlanarCalibrationCoordinates", (DL_FUNC) &_SBRUV_transformPlanarCalibrationCoordinates, 5},
     {"_SBRUV_undistort", (DL_FUNC) &_SBRUV_undistort, 5},
     {NULL, NULL, 0}
