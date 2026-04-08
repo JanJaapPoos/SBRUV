@@ -171,6 +171,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rotationMatrixZYX_SM_cpp
+NumericMatrix rotationMatrixZYX_SM_cpp(const NumericVector& t);
+RcppExport SEXP _SBRUV_rotationMatrixZYX_SM_cpp(SEXP tSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const NumericVector& >::type t(tSEXP);
+    rcpp_result_gen = Rcpp::wrap(rotationMatrixZYX_SM_cpp(t));
+    return rcpp_result_gen;
+END_RCPP
+}
 // thresholdImageMatrix
 Rcpp::IntegerMatrix thresholdImageMatrix(Rcpp::NumericMatrix mat, Rcpp::NumericMatrix thresh_mat, double delta, int type);
 RcppExport SEXP _SBRUV_thresholdImageMatrix(SEXP matSEXP, SEXP thresh_matSEXP, SEXP deltaSEXP, SEXP typeSEXP) {
@@ -182,17 +193,6 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< double >::type delta(deltaSEXP);
     Rcpp::traits::input_parameter< int >::type type(typeSEXP);
     rcpp_result_gen = Rcpp::wrap(thresholdImageMatrix(mat, thresh_mat, delta, type));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rotationMatrixZYX_SM_cpp
-NumericMatrix rotationMatrixZYX_SM_cpp(NumericVector t);
-RcppExport SEXP _SBRUV_rotationMatrixZYX_SM_cpp(SEXP tSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type t(tSEXP);
-    rcpp_result_gen = Rcpp::wrap(rotationMatrixZYX_SM_cpp(t));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -240,8 +240,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_SBRUV_orderCorners", (DL_FUNC) &_SBRUV_orderCorners, 3},
     {"_SBRUV_meanBlurImage", (DL_FUNC) &_SBRUV_meanBlurImage, 2},
     {"_SBRUV_rgbToGray", (DL_FUNC) &_SBRUV_rgbToGray, 3},
-    {"_SBRUV_thresholdImageMatrix", (DL_FUNC) &_SBRUV_thresholdImageMatrix, 4},
     {"_SBRUV_rotationMatrixZYX_SM_cpp", (DL_FUNC) &_SBRUV_rotationMatrixZYX_SM_cpp, 1},
+    {"_SBRUV_thresholdImageMatrix", (DL_FUNC) &_SBRUV_thresholdImageMatrix, 4},
     {"_SBRUV_transformPlanarCalibrationCoordinates", (DL_FUNC) &_SBRUV_transformPlanarCalibrationCoordinates, 5},
     {"_SBRUV_undistort", (DL_FUNC) &_SBRUV_undistort, 5},
     {NULL, NULL, 0}
