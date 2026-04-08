@@ -1,5 +1,8 @@
 #include <Rcpp.h>
+
 using namespace Rcpp;
+
+#include "rotationMatrixZYX_SM_cpp.h"
 
 // ---------- Main transformation function ----------
 // [[Rcpp::export]]
