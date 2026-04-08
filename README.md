@@ -93,11 +93,10 @@ digitizeImages(image.file = file.path(obs_dir, 'Images'),
 Running this command will open the digitizing part of StereoMorph. Once you have digitized a number of frames, the 3D locations of the landmarks can be reconstructed, and put into the R workspace as shapes. This is done using the reconstructStereoSets() function.
 
 ```
-reconstructStereoSets(shapes.2d = file.path(obs_dir, 'Shapes 2D'), 
+shapes <- reconstructStereoSets(shapes.2d = file.path(obs_dir, 'Shapes 2D'), 
                       shapes.3d = file.path(obs_dir, 'Shapes 3D'),
                       cal.file  = file.path(obs_dir, 'calibration.txt'))
 
-shapes <- readShapes(file = file.path(obs_dir, 'Shapes 3D'))
 ```
 
 ```
