@@ -3,9 +3,6 @@ transformPlanarCalibrationCoordinatesR <- function(tpar, nx, ny, sx, sy=NULL){
 	# IF Y-SCALE IS NULL, MAKE SAME AS X-SCALE
 	if(is.null(sy)) sy <- sx
 
-	# CONVERT INPUT PARAMETERS TO MATRIX
-	tpar <- matrix(tpar, ncol=6, byrow=TRUE)
-
 	# MAKE SINGLE SCALED GRID POINT MATRIX, IN REAL-WORLD UNITS
 	grid <- cbind(rep(0:(nx-1), ny)*sx, c(matrix(t(matrix((ny-1):0, nrow=ny, ncol=nx)), nrow=1, byrow=F))*sy, rep(0, nx*ny))
 
