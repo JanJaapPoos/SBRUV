@@ -64,8 +64,8 @@ NumericVector undistort(NumericVector x,
   
   // If x is a vector, make it a 1xN matrix
   if (x.size() > 0 && dim.size() == 0) {
-    x.attr("dim") = IntegerVector::create(1, x.size());
-    dim = x.attr("dim");
+    SEXP dimAttr2 = x.attr("dim");
+    dim = Rf_isNull(dimAttr2) ? IntegerVector() : as<IntegerVector>(dimAttr2);
   }
   
   // Now x is 2D: nrow × 2
