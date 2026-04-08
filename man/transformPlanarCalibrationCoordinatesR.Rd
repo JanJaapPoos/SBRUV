@@ -5,7 +5,7 @@
 This function rotates and translates a planar grid or grids according to specified transformation parameters in R. This function is called by \code{\link{dltCalibrateCameras}}, to find the optimal transformation parameters for a set of arbitrarily oriented grid points that minimizes DLT calibration error. This function is also called by \code{\link{dltTestCalibration}} to generate an ideal grid for accuracy testing. there is a cpp version, but that has a bug
 }
 \usage{
-transformPlanarCalibrationCoordinates(tpar, nx, ny, sx, sy = NULL)
+transformPlanarCalibrationCoordinatesR(tpar, nx, ny, sx, sy = NULL)
 }
 \arguments{
   \item{tpar}{a vector of six transformation parameters per grid. The first three being rotational parameters (rotation about the z, y and x axes, respectively) and the second three being translational parameters (translation along the x, y and z axes, respectively). For more than one grid, these six values are concatenated as a vector.}
