@@ -7,7 +7,7 @@ dltCCEstimateStartParams <- function(coor.2d, num.grid, nx, ny, grid.size, p.fix
 	if(!is.null(p.fix) && length(p.fix) >= use.param.min*6){
 
 		# GET 3D COORDINATES BASED ON OPTIMIZED PARAMETERS
-		coor_3d_coeff <- transformPlanarCalibrationCoordinatesR(tpar=matrix(c(rep(0, 6), p.fix), nrow=6, byrow=T), 
+		coor_3d_coeff <- transformPlanarCalibrationCoordinatesR(tpar=matrix(c(rep(0, 6), p.fix), ncol=6, byrow=T), 
 			nx=nx, ny=ny, sx=grid.size)
 
 		# GET 2D INPUT COORDINATES
