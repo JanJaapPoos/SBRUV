@@ -57,6 +57,10 @@ transformPlanarCalibrationCoordinates <- function(tpar, nx, ny, sx, sy_ = NULL) 
     .Call(`_SBRUV_transformPlanarCalibrationCoordinates`, tpar, nx, ny, sx, sy_)
 }
 
+rotationMatrixZYX_SM_cpp <- function(t) {
+    .Call(`_SBRUV_rotationMatrixZYX_SM_cpp`, t)
+}
+
 undistort <- function(x, image_size, center = as.numeric( c(0, 0)), k = as.numeric( c(0, 0, 0)), p = as.numeric( c(0, 0))) {
     .Call(`_SBRUV_undistort`, x, image_size, center, k, p)
 }
