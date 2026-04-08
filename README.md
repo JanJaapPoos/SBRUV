@@ -66,7 +66,7 @@ Once the cameras are calibrated and DLT parameters obtained, the observations st
 The first thing to do is to split the video in separate frames using the extractFramesDir() function, which takes the observations directory as argument. The ‘nth’ argument allows extracting every nth frame only, to reduce the number of extracted frames. The default value for ‘nth’ is 1, so that all frames are extracted. Setting it to 24 would extract a single frame for every second of video (because video fps is 24).
 
 ```
-extractFramesDir(img.dir = obs_dir, nth = 1)
+extractFramesDir(img.dir = obs_dir, nth = 1, pattern = "MP4")
 ```
 
 This function extracts all frames from the video into a sub-directory named “images” within the observations directory. In order to digitize the images, we also need the calibration file that we made earlier. This calibration file contains the DLT parameters. We copy the calibration text file to the observations directory using the file.copy() function in R. This takes a file name to copy (in this case our calibration_gopro.txt file), and copies it to another location (in this case it creates a copy named calibration_gopro.txt in the observations directory).
