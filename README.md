@@ -55,7 +55,7 @@ calibrateCameras(img.dir = cal_dir,                   # name of the directory wi
                  corner.dir = 'corners', verify.dir = 'verify', error.dir = 'errors',
                  undistort = TRUE, fit.min.break = 2, nlm.calls.max = 15,
                  objective.min = 0.8, max.sample.optim = 30, num.sample.est = 20,
-                 num.aspects.sample = 4, num.sample.sets = 3, objective.min.break = 1.2)
+                 num.aspects.sample = 6, num.sample.sets = 3, objective.min.break = 1.2)
 ```
 
 In this code nx is the number of horizontal inner corners, ny is the number of vertical inner corners, and sq.size is the size of the square. The size of the square has to be provided within quotation marks, and include the units of the measurement, e.g. ‘64.43 mm’, or ‘12.43 cm’. The function writes a calibration file to disk. The name of this file is set by the cal.file argument. 
