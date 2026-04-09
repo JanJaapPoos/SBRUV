@@ -75,18 +75,12 @@ This function extracts all frames from the video into a sub-directory named “i
 file.copy("calibration.txt" , file.path(obs_dir,"calibration.txt"))
 ```
 
-Finally we need to make a file that lists the landmarks that we want to digitize. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later. We enter these two landmarks in a a file that we will call “landmarks.txt”. This file is placed in the directory with the calibration.txt file and the observations.
-
-```
-writeLines(c("snout", "caudal_fin"), file.path(obs_dir,"landmarks.txt"))
-```
-
-Now that we have the calibration file for the DLT parameters, our stereo observations, and the landmarks that we want to digitize, we can digitize the images, using the digitizeImages() function.
+Now that we have the calibration file for the DLT parameters and our stereo observations, we can digitize the images, using the digitizeImages() function. This function also takes a set of landmarks to be dgitized. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later.
 
 ```
 digitizeImages(image.file = file.path(obs_dir, 'Images'), 
                shapes.file = file.path(obs_dir, 'Shapes 2D'),
-               landmarks.ref = file.path(obs_dir, 'landmarks.txt'), 
+               landmarks.ref = c("snout", "caudal_fin"), 
                cal.file = file.path(obs_dir,'calibration.txt'))
 ```
 
