@@ -10,10 +10,6 @@ Checks if ffmpeg is available, and if not, downloads a copy of Ffmpeg from https
 \usage{
 getFfmpeg()
 }
-%- maybe also 'usage' for other objects documented here.
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 Null
 }

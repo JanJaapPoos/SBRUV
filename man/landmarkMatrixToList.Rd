@@ -7,7 +7,7 @@ landmarkMatrixToList(lm.matrix, semilandmark.pattern='[0-9]+$', k=ncol(lm.matrix
 }
 \arguments{
   \item{lm.matrix}{a landmark matrix. See \code{\link{readLandmarksToMatrix}}.}
-  \item{semilandmark.pattern}{a regular expression pattern passed to \code{sub()} for identifying and grouping curve points. The default is landmark names ending in one or more numbers. To disable grouping, set to code{''}.}
+  \item{semilandmark.pattern}{a regular expression pattern passed to \code{sub()} for identifying and grouping curve points. The default is landmark names ending in one or more numbers. To disable grouping, set to \code{''}.}
   \item{k}{the number of dimensions of the landmark data.}
 }
 \value{a landmark list.}
