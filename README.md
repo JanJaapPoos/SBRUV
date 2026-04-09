@@ -52,9 +52,8 @@ calibrateCameras(img.dir = cal_dir,                   # name of the directory wi
                  sq.size = "6.342 mm",                # square size, includes units
                  num.aspects.read = 80                # number of aspects/frames checked for dectection of checkerboard
                  cal.file = 'calibration.txt',        # name of the calibration file that will be output
-                 corner.dir = 'corners', verify.dir = 'verify', error.dir = 'errors',
-                 undistort = TRUE, fit.min.break = 2, nlm.calls.max = 15,
-                 objective.min = 0.8, max.sample.optim = 30, num.sample.est = 20,
+                 undistort = TRUE, fit.min.break = 2, 
+                 objective.min = 0.8, num.sample.est = 20,
                  num.aspects.sample = 6, num.sample.sets = 3, objective.min.break = 1.2)
 ```
 
@@ -63,7 +62,7 @@ In this code nx is the number of horizontal inner corners, ny is the number of v
 # Making and digitizing observations
 Once the cameras are calibrated and DLT parameters obtained, the observations stereo footage can be used to estimate position of points in 3 dimensions. This is called “digitizing” the observations, and the points that we digitize are called “landmarks”. Once positions of landmarks in three dimensions are known we estimate distances between landmarks.
 
-The first thing to do is to split the video in separate frames using the extractFramesDir() function, which takes the observations directory as argument. The ‘nth’ argument allows extracting every nth frame only, to reduce the number of extracted frames. The default value for ‘nth’ is 1, so that all frames are extracted. Setting it to 24 would extract a single frame for every second of video (because video fps is 24).
+The first thing to do is to split the video in separate frames using the extractFramesDir() function, which takes the observations directory as argument. The ‘nth’ argument allows extracting every nth frame only, to reduce the number of extracted frames. The default value for ‘nth’ is 1, so that all frames are extracted. For a 24 fps video file, setting it to 24 would extract a single frame for every second of video.
 
 ```
 extractFramesDir(img.dir = obs_dir, nth = 1, pattern = "MP4")
@@ -85,7 +84,7 @@ Running this command will open the digitizing part of StereoMorph. Once you have
 ```
 shapes <- reconstructStereoSets(shapes.2d = file.path(obs_dir, 'Shapes 2D'), 
                       shapes.3d = file.path(obs_dir, 'Shapes 3D'),
-                      cal.file  = file.path(obs_dir, 'calibration.txt'))
+                      cal.file  = 'calibration.txt')
 
 ```
 
