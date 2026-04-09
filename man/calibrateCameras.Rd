@@ -6,9 +6,9 @@
 This function uses a checkerboard at different positions and angles within a stereo camera setup to estimate DLT calibration coefficients for use in stereo reconstruction. This function is a wrapper for the function \code{dltCalibrateCameras}.
 }
 \usage{
-calibrateCameras(img.dir, sq.size, nx, ny, cal.file, corner.dir,
-                 print.progress = TRUE, flip.view = FALSE, verify.dir = NULL,
-                 error.dir = NULL, min.views = 'max', exec.dir = NULL, 
+calibrateCameras(img.dir, sq.size, nx, ny, cal.file, corner.dir = 'calibration_corners',
+                 print.progress = TRUE, flip.view = FALSE, verify.dir = 'calibration_verify',
+                 error.dir = 'calibration_errors', min.views = 'max', exec.dir = NULL, 
                  undistort = FALSE, num.aspects.read = 'auto', 
                  num.sample.est = 'auto', num.sample.sets = 'auto', 
                  num.aspects.sample = 'auto', max.sample.optim = 30, nlm.calls.max = 20, 

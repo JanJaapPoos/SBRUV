@@ -1,5 +1,5 @@
-calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir,
-	print.progress = TRUE, flip.view = FALSE, verify.dir = NULL, error.dir = NULL,
+calibrateCameras <- function(img.dir, sq.size, nx, ny, cal.file, corner.dir = 'calibration_corners',
+	print.progress = TRUE, flip.view = FALSE, verify.dir = 'calibration_verify', error.dir = 'calibration_errors',
 	min.views = 'max', exec.dir = NULL, undistort = FALSE, num.aspects.read = 'auto', 
 	num.sample.est = 'auto', num.sample.sets = 'auto', num.aspects.sample = 'auto', 
 	max.sample.optim = 30, nlm.calls.max = 20, fit.min.break = 1, objective.min = 1, 
