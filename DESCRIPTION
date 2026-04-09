@@ -10,5 +10,6 @@ Suggests: rgl
 Author: Aaron Olsen, Annat Haber, Jan Jaap Poos
 Maintainer: Jan Jaap Poos <janjaap.poos@gmail.com>
 Repository: CRAN
+Encoding: UTF-8
 License: CC BY-SA 4.0
 RoxygenNote: 7.3.2
