@@ -6,11 +6,11 @@ SBRUV is a copy of [StereoMorph](https://aaronolsen.github.io/software/stereomor
 
 To get started using SBRUV, first download and install the package in R using 
 ```
-install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T, type = "win.binary")
+install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T)
 ```
 for windows or
 ```
-install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T, type = "mac.binary")
+install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T)
 ```
 for Mac. Once the package installed, it can be used after calling library(SBRUV):
 ```
@@ -58,7 +58,7 @@ calibrateCameras(img.dir = cal_dir,                   # name of the directory wi
                  num.aspects.sample = 4, num.sample.sets = 3, objective.min.break = 1.2)
 ```
 
-In this code nx is the number of horizontal inner corners, ny is the number of vertical inner corners, and sq.size is the size of the square. The size of the square has to be provided within quotation marks, and include the units of the measurement, e.g. ‘64.43 mm’, or ‘12.43 cm’. 
+In this code nx is the number of horizontal inner corners, ny is the number of vertical inner corners, and sq.size is the size of the square. The size of the square has to be provided within quotation marks, and include the units of the measurement, e.g. ‘64.43 mm’, or ‘12.43 cm’. The function writes a calibration file to disk. The name of this file is set by the cal.file argument. 
 
 # Making and digitizing observations
 Once the cameras are calibrated and DLT parameters obtained, the observations stereo footage can be used to estimate position of points in 3 dimensions. This is called “digitizing” the observations, and the points that we digitize are called “landmarks”. Once positions of landmarks in three dimensions are known we estimate distances between landmarks.
@@ -69,19 +69,15 @@ The first thing to do is to split the video in separate frames using the extract
 extractFramesDir(img.dir = obs_dir, nth = 1, pattern = "MP4")
 ```
 
-This function extracts all frames from the video into a sub-directory named “images” within the observations directory. In order to digitize the images, we also need the calibration file that we made earlier. This calibration file contains the DLT parameters. We copy the calibration text file to the observations directory using the file.copy() function in R. This takes a file name to copy (in this case our calibration_gopro.txt file), and copies it to another location (in this case it creates a copy named calibration_gopro.txt in the observations directory).
+This function extracts all frames from the video into a sub-directory named “images” within the observations directory. 
 
-```
-file.copy("calibration.txt" , file.path(obs_dir,"calibration.txt"))
-```
-
-Now that we have the calibration file for the DLT parameters and our stereo observations, we can digitize the images, using the digitizeImages() function. This function also takes a set of landmarks to be dgitized. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later.
+Now that we have the calibration file for the DLT parameters and our stereo observations, we can digitize the images, using the digitizeImages() function. This function also takes a set of landmarks to be dgitized. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later. We also need the calibration file that was made earlier. This calibration file contains the DLT parameters. The location of this file is provided to the function using the cal.file argument.
 
 ```
 digitizeImages(image.file = file.path(obs_dir, 'Images'), 
                shapes.file = file.path(obs_dir, 'Shapes 2D'),
-               landmarks.ref = c("snout", "caudal_fin"), 
-               cal.file = file.path(obs_dir,'calibration.txt'))
+               landmarks.ref = c('snout', 'caudal_fin'), 
+               cal.file = 'calibration.txt')
 ```
 
 Running this command will open the digitizing part of StereoMorph. Once you have digitized a number of frames, the 3D locations of the landmarks can be reconstructed, and put into the R workspace as shapes. This is done using the reconstructStereoSets() function.
