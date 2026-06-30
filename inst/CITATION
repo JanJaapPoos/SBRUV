@@ -1,19 +1,18 @@
-citHeader("To cite StereoMorph in a publication use:")
+citHeader("To cite SBRUV/StereoMorph in a publication use:")
 
-citEntry(entry="Article",
+utils::bibentry(bibtype="Article",
 	title = "StereoMorph: an R package for the collection of 3D landmarks and curves using a stereo camera set-up",
-        author = personList(as.person("AM Olsen"),as.person("MW Westneat")),
+  author = c(person("Aaron M.", "Olsen"),person("Mark W.", "Westneat")),
 	journal = "Methods in Ecology and Evolution",
-  	year = 2015,
+  year = 2015,
 	volume = "6",
 	pages = "351-356",
-        textVersion = "Olsen Aaron M, Mark W Westneat. 2015. StereoMorph: an R package for the collection of 3D landmarks and curves using a stereo camera set-up. Methods in Ecology and Evolution 6:351-356. DOI: 10.1111/2041-210X.12326.")
+  textVersion = "Olsen Aaron M, Mark W Westneat. 2015. StereoMorph: an R package for the collection of 3D landmarks and curves using a stereo camera set-up. Methods in Ecology and Evolution 6:351-356. DOI: 10.1111/2041-210X.12326.")
 
-citEntry(entry="Manual",
-	title = "{StereoMorph}: Stereo Camera Calibration and Reconstruction",
-	author = c(person("Aaron", "Olsen"),
-			   person("Annat", "Haber")),
-	note = "version 1.6.5",
-	year = 2022,
-    textVersion  = "Olsen, AM & A Haber (2022). StereoMorph: Stereo Camera Calibration and Reconstruction. Version 1.6.5. https://CRAN.R-project.org/package=StereoMorph."
+utils::bibentry(bibtype="Manual",
+	title = "{SBRUV}: A package for Stereo BRUV analysis based on StereoMorph",
+	author = c(person("Jan Jaap", "Poos")),
+	note = "version 1.1.0",
+	year = 2026,
+    textVersion  = "Poos, JJ (2026) SBRUV: A package for Stereo BRUV analysis based on StereoMorph. Version 1.1.0."
 )

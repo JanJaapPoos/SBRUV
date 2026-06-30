@@ -21,7 +21,7 @@ This function is called by \code{\link{unifyLandmarks}} to align landmark sets a
 }
 \value{\code{m2} after alignment.}
 \references{
-Rohlf, F.J. (1990) "Chapter 10. Rotational fit (Procrustes) Methods." \emph{Proceedings of the Michigan Morphometrics Workshop}. Ed. F. James Rohlf and Fred L. Bookstein. The University of Michigan Museum of Zoology, 1990. 227--236. \href{http://deepblue.lib.umich.edu/handle/2027.42/49535}{Info page at lib.umich.edu}
+Rohlf, F.J. (1990) "Chapter 10. Rotational fit (Procrustes) Methods." \emph{Proceedings of the Michigan Morphometrics Workshop}. Ed. F. James Rohlf and Fred L. Bookstein. The University of Michigan Museum of Zoology, 1990. 227--236.
 }
 \author{Annat Haber, Aaron Olsen}
 \note{Modified from \code{unifyVD()} by Annat Haber.}

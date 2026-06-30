@@ -1,7 +1,7 @@
 Package: SBRUV
 Date: 2026-06-30
 Title: Stereo Camera Calibration and Reconstruction for StereoBRUV Practical
-Description: This package provides tools for stereo camera calibration and
+Description: Tools for stereo camera calibration and
     3D reconstruction in StereoBRUV applications. It is based on the
     StereoMorph package, with bug fixes, performance improvements, and
     additional convenience functions. The original functionality was

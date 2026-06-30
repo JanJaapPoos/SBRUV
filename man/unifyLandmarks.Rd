@@ -37,7 +37,7 @@ a list of class \code{"unifyLandmarks"} with the following elements:
   \item{unify.rmse}{a vector of the root-mean-square error of each alignment (the number of sets minus one).}
 }
 \references{
-Rohlf, F.J. (1990) "Chapter 10. Rotational fit (Procrustes) Methods." \emph{Proceedings of the Michigan Morphometrics Workshop}. Ed. F. James Rohlf and Fred L. Bookstein. The University of Michigan Museum of Zoology, 1990. 227--236. \href{http://deepblue.lib.umich.edu/handle/2027.42/49535}{Info page at lib.umich.edu}
+Rohlf, F.J. (1990) "Chapter 10. Rotational fit (Procrustes) Methods." \emph{Proceedings of the Michigan Morphometrics Workshop}. Ed. F. James Rohlf and Fred L. Bookstein. The University of Michigan Museum of Zoology, 1990. 227--236.
 }
 \author{Annat Haber, Aaron Olsen}
 \note{This function was modified by A Olsen from the R function \code{unifyVD()} written by A Haber.}

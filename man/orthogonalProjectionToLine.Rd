@@ -21,7 +21,7 @@ The line input can be defined using one of three standard ways: two points on th
 a vector if \code{p} is a vector and a matrix if \code{p} is a matrix. The returned vector or matrix will be of the same dimensions as \code{p}.
 }
 \references{
-\url{http://paulbourke.net/geometry/pointlineplane/}
+\url{https://paulbourke.net/geometry/pointlineplane/}
 }
 \author{Aaron Olsen}
 \seealso{\code{\link{distancePointToLine}}}

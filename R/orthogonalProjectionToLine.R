@@ -1,7 +1,7 @@
 orthogonalProjectionToLine <- function(p, l1 = NULL, l2 = NULL){
 
 	# FINDS POSITION OF POINT X ON A LINE AT THE MINIMUM DISTANCE FROM POINT X TO THE INPUT POINT P
-	# Adapted from : http://paulbourke.net/geometry/pointline/
+	# Adapted from : https://paulbourke.net/geometry/pointlineplane/
 
 	# GET LINE PARAMETERS IF L1 IS LIST
 	if(is.list(l1)){
