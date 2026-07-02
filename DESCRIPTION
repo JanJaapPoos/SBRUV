@@ -11,8 +11,9 @@ Depends: R (>= 2.11.0)
 Imports: grDevices, graphics, stats, utils, bezier (>= 1.1), grid, rjson, shiny (>= 0.13.0), Rcpp (>= 0.9.9), jpeg, tiff, png, svgViewR (>= 1.0.1), MASS
 LinkingTo: Rcpp
 Suggests: rgl
-Author: Aaron Olsen, Annat Haber, Jan Jaap Poos
-Maintainer: Jan Jaap Poos <janjaap.poos@gmail.com>
+Authors@R: c(person(given = "Aaron", family = "Olsen", role = "aut"),
+    person(given = "Annat", family = "Haber", role = "aut"),
+    person(given = c("Jan Jaap"), family = "Poos", role = c("aut", "cre"), email = "janjaap.poos@gmail.com"))
 Repository: CRAN
 Encoding: UTF-8
 License: CC BY-SA 4.0
