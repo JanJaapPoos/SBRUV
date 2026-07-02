@@ -6,7 +6,7 @@ Description: Tools for stereo camera calibration and
     StereoMorph package, with bug fixes, performance improvements, and
     additional convenience functions. The original functionality was
     developed in the StereoMorph package by Aaron Olsen.
-Version: 1.1.0
+Version: 1.1.1
 Depends: R (>= 2.11.0)
 Imports: grDevices, graphics, stats, utils, bezier (>= 1.1), grid, rjson, shiny (>= 0.13.0), Rcpp (>= 0.9.9), jpeg, tiff, png, svgViewR (>= 1.0.1), MASS
 LinkingTo: Rcpp
