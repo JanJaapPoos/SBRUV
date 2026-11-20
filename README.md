@@ -5,14 +5,11 @@ SBRUV is a copy of [StereoMorph](https://aaronolsen.github.io/software/stereomor
 # Getting started. 
 
 To get started using SBRUV, first download and install the package in R using 
-```
-install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T)
-```
-for windows or
+
 ```
 install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev', 'https://cloud.r-project.org'), dependencies = T)
 ```
-for Mac. Once the package installed, it can be used after calling library(SBRUV):
+Once the package is installed, it can be used after calling library(SBRUV):
 ```
 library(SBRUV)
 ```
