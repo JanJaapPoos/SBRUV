@@ -15,7 +15,7 @@ extractFramesDir <- function (img.dir = "obs_videos", output.dir = NULL, pattern
       '" -vf "select=not(mod(n\\,', nth, '))"',
       ' -fps_mode passthrough',
       ' -frame_pts 1 "',
-      output.dir2, '/%d.jpg"'
+      output.dir2, '/%05d.jpg"'
     )
     
     system(cmd1, show.output.on.console = F)
