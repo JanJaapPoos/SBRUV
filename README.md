@@ -10,7 +10,7 @@ install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), depen
 ```
 for windows or
 ```
-install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev'), dependencies = T)
+install.packages('SBRUV', repos = c('https://janjaappoos.r-universe.dev', 'https://cloud.r-project.org'), dependencies = T)
 ```
 for Mac. Once the package installed, it can be used after calling library(SBRUV):
 ```
