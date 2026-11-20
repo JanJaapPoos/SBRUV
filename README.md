@@ -67,7 +67,7 @@ extractFramesDir(img.dir = obs_dir, nth = 1, pattern = "MP4")
 
 This function extracts all frames from the video into a sub-directory named “images” within the observations directory. 
 
-Now that we have the calibration file for the DLT parameters and our stereo observations, we can digitize the images, using the digitizeImages() function. This function also takes a set of landmarks to be dgitized. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later. We also need the calibration file that was made earlier. This calibration file contains the DLT parameters. The location of this file is provided to the function using the cal.file argument.
+Now that we have the calibration file for the DLT parameters and our stereo observations, we can digitize the images, using the digitizeImages() function. This function also takes a set of landmarks to be digitized. Let’s say we want the snout and caudal fin of individual fish so that we can estimate fish lengths later. We also need the calibration file that was made earlier. This calibration file contains the DLT parameters. The location of this file is provided to the function using the cal.file argument.
 
 ```
 digitizeImages(image.file = file.path(obs_dir, 'Images'), 
@@ -128,4 +128,4 @@ This work is licensed under a
 
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[cc-by-sa-shield]: https://img.shields.io/bae/License-CC%20BY--SA%204.0-lightgrey.svg
